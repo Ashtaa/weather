@@ -7,6 +7,11 @@
     flex-direction: column;
     align-items: center;
 }
+@media(max-width:786px){
+    .weather{
+        width: 350px;
+    }
+}
 .search-bar{
     display: flex;
     align-items: center;
