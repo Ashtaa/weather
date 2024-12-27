@@ -73,7 +73,7 @@ function Weather() {
     return (
         <div className='weather'>
             <div className='search-bar'>
-                <input ref={inputRef} type="text" placeholder='Search city' />
+                <input ref={inputRef} type="text" placeholder='Search city' className='input' />
                 <img src={search_icon} alt="Search" onClick={() => search(inputRef.current.value)} />
             </div>
             {error && <p className='error'>{error}</p>}

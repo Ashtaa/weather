@@ -1,4 +1,5 @@
 .weather{
+    margin: 0;
     place-self: center;
     padding: 40px;
     border-radius: 10px;
@@ -11,22 +12,40 @@
     .weather{
         width: 350px;
     }
+    .search-bar{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    } 
+    .search-bar input{
+        height: 50px;
+        border: none;
+        outline: none;
+         border-radius: 40px;
+         padding-left: 25px;
+         color: #626262;
+         background: #ebfffc; 
+         
+      }
 }
-.search-bar{
-    display: flex;
-    align-items: center;
-    gap: 12px;
+@media (min-width: 768px) {
+    .search-bar{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .search-bar input{
+      height: 50px;
+      border: none;
+      outline: none;
+       border-radius: 40px;
+       padding-left: 25px;
+       color: #626262;
+       background: #ebfffc; 
+       font-size: 18px;
+    }
 }
-.search-bar input{
-  height: 50px;
-  border: none;
-  outline: none;
-   border-radius: 40px;
-   padding-left: 25px;
-   color: #626262;
-   background: #ebfffc; 
-   font-size: 18px;
-}
+
 .search-bar img{
     width: 50px;
     padding: 15px;
