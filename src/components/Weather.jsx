@@ -73,11 +73,15 @@ function Weather() {
     return (
         <div className='weather'>
             <div className='search-bar'>
-                <input ref={inputRef} type="text" placeholder='Search city' className='input' />
-                <img src={search_icon} alt="Search" onClick={() => search(inputRef.current.value)} />
+                <input ref={inputRef} type="text" placeholder='Search city' className='input' onKeyDown={(e)=>{
+                   if( e.key === "Enter") {
+                    search(inputRef.current.value)
+                   }
+                }} />
+                <img src={search_icon} alt="Search" onClick={() => search(inputRef.current.value)}  />
             </div>
             {error && <p className='error'>{error}</p>}
-            <div>
+            <div className='item'>
                 <img src={weatherdata.icon} alt="Weather Icon" className='weather-icon' />
                 <p className='temperature'>{weatherdata.temperature !== null ? `${weatherdata.temperature}°C` : 'N/A'}</p>
                 <p className='location'>{weatherdata.location}</p>
@@ -92,8 +96,8 @@ function Weather() {
                     <div className="col">
                         <img src={wind_icon} alt="Wind Speed" />
                         <div>
-                            <p>{weatherdata.windspeed !== null ? `${weatherdata.windspeed} km/h` : 'N/A'}</p>
-                            <span>Wind Speed</span>
+                            <p style={{ fontSize:'20px'}}>{weatherdata.windspeed !== null ? `${weatherdata.windspeed} km/h` : 'N/A'}</p>
+                            <span style={{ width:'100px'}}>Wind Speed</span>
                         </div>
                     </div>
                 </div>

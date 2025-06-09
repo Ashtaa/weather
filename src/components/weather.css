@@ -11,8 +11,26 @@
     width: 90%;
     max-width: 500px; /* Ensures a max width on larger screens */
     box-sizing: border-box; /* Prevents padding/margin overflow */
+    align-items: center;
+}
+.search-bar input:focus {
+    box-shadow: 0 0 5px rgba(0, 128, 255, 0.6);
+    background: #ffffff;
 }
 
+.item{
+ display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;  
+}
+.error{
+   margin-top: 40px;
+   
+   font-size: 20px;
+    color: rgb(255, 0, 0);
+
+}
 .search-bar {
     display: flex;
     align-items: center;
@@ -43,8 +61,7 @@
 }
 
 .weather-icon {
-    width: 150px;
-    margin: 30px 0;
+    
 }
 
 .temperature {
